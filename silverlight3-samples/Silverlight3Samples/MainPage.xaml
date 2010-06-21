@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="Silverlight3Samples.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" d:DesignWidth="640" d:DesignHeight="480"
+    xmlns:i="clr-namespace:Microsoft.Expression.Interactivity;assembly=Microsoft.Expression.Interactivity"
+    xmlns:behaviors="clr-namespace:Silverlight3Samples.Behaviors"
+	Width="640" Height="480">
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Border Background="Blue">
+            <!--<i:Interaction.Behaviors>
+                <l:HoverBehavior Hover="DarkCyan" />
+            </i:Interaction.Behaviors>-->
+            <Grid behaviors:DragDropBehavior.IsHost="True">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <TextBlock Text="Hey I'm an Attached Behavior in SL3!" />
+                <Ellipse Grid.Row="0" Width="100" Height="50" Fill="Beige"
+                    HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <i:Interaction.Behaviors>
+                        <behaviors:SimpleDragDropBehavior />
+                    </i:Interaction.Behaviors>
+                </Ellipse>
+                <Ellipse Grid.Row="1" Width="100" Height="50" Fill="Beige"
+                    HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <i:Interaction.Behaviors>
+                        <behaviors:DragDropBehavior />
+                    </i:Interaction.Behaviors>
+                </Ellipse>
+                <Ellipse Fill="#FFFFFFFF" Stroke="#FF000000" Margin="242,37,214,113" Grid.Row="1">
+                    <i:Interaction.Behaviors>
+                        <behaviors:DragDropBehavior/>
+                    </i:Interaction.Behaviors>
+                </Ellipse>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>
