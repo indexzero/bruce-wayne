@@ -1,0 +1,17 @@
+﻿<s:SurfaceWindow x:Class="WpfSurfaceSamples.MainSurfaceWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:s="http://schemas.microsoft.com/surface/2008"
+    xmlns:behaviors="clr-namespace:WpfSurfaceSamples.Behaviors"
+    Title="WpfSurfaceSamples"
+    >
+  <s:SurfaceWindow.Resources>
+    <ImageBrush x:Key="WindowBackground" Stretch="None" Opacity="0.6" ImageSource="pack://application:,,,/Resources/WindowBackground.jpg"/>
+  </s:SurfaceWindow.Resources>
+
+  <Grid Background="{StaticResource WindowBackground}"
+    behaviors:ContactMultiTap.MultiTapInterval="00:00:00.5"
+    behaviors:ContactMultiTap.ContactMultiTapGesture="OnContactMultiTap">
+
+  </Grid>
+</s:SurfaceWindow>
