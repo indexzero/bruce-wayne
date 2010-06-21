@@ -1,5 +1,4 @@
 ## Bruce Wayne
----
 
 This is a collection of samples various .NET technologies (WPF, Silverlight, MGrammar, C#) that I've put together from finding gotchas or simply by discovering what I consider best practices or useful techniques. They have all been posted to my blog with some more background. Check the revision history for more details.
 
